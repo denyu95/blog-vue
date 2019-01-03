@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="article">
     <h1 v-html="msg"></h1>
     <input v-model="message">
     <button v-on:click="click">请求</button>
