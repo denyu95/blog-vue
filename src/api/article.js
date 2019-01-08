@@ -1,4 +1,4 @@
-import request from '../utils/request';
+import request from '@/utils/request';
 
 // 查询文章列表
 export function listArticle(params) {
