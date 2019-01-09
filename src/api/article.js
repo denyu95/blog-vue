@@ -16,3 +16,12 @@ export function getArticle(id) {
         method: 'get'
     });
 }
+
+// 保存文章
+export function saveArticle(data) {
+    return request({
+        url: `/mgt/article`,
+        method: 'post',
+        data
+    })
+}
