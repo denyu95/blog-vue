@@ -1,9 +1,12 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <li v-for="item in items" :key="item.createAt">
-      <router-link :to="{name: 'article', params: {id : item.id}}">标题：<strong>{{ item.title }}</strong>，创建时间：{{item.createAt}}</router-link>
-    </li>
+    <div v-for="item in items" :key="item.createAt">
+      <router-link :to="{name: 'article', params: {id : item.id}}" style="text-decoration:none">
+        <h3><strong>{{ item.title }}</strong></h3>
+        <h4>发布时间：{{item.createAt}}</h4>
+      </router-link>
+    </div>
   </div>
 </template>
 

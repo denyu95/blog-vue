@@ -1,6 +1,7 @@
 <template>
   <div class="article">
-    <h1 v-html="msg"></h1>
+    <h1>{{title}}</h1>
+    <div v-html="content"></div>
   </div>
 </template>
 
@@ -9,15 +10,17 @@
   
   /* eslint-disable */
   export default {
-    name: 'article-content',
+    name: 'articleDetail',
     data: function () {
       return {
-        msg: ''
+        title: '',
+        content: ''
       }
     },
     created: function() {
       getArticle(this.$route.params.id).then(res => {
-        this.msg = res.data.content
+        this.title = res.data.title
+        this.content = res.data.content
       }).catch(err => {
         console.log(err)
       })
