@@ -1,8 +1,8 @@
 <template>
   <div class="admins">
-    文章标题：<input v-model="title"/>
+    <h5>文章标题</h5><input v-model="title" style="width:200px"/>
     <br/>
-    文章内容：<input v-model="content"/>
+    <h5>文章内容</h5><textarea v-model="content" style="height:500px;width:550px"/>
     <br/>
     <button v-on:click="save">保存</button>
   </div>
@@ -26,8 +26,12 @@
         articleDto.content = this.content
         saveArticle(articleDto).then(res => {
           console.log(res)
+          alert("保存成功！")
+          this.title = ''
+          this.content = ''
         }).catch(err => {
           console.log(err)
+          alert("保存失败！")
         })
       }
     }

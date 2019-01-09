@@ -1,7 +1,7 @@
 <template>
   <div class="article">
     <h1>{{title}}</h1>
-    <div v-html="content"></div>
+    <div v-html="content" style="margin-left:30%;text-align:left;"></div>
   </div>
 </template>
 
