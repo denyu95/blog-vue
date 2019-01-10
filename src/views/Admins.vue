@@ -1,8 +1,8 @@
 <template>
-  <div class="admins">
-    <h5>文章标题</h5><input v-model="title" style="width:200px"/>
+  <div class="admins" style="height: 100%;">
+    <h5>文章标题</h5><input v-model="title" style="width:20%;"/>
     <br/>
-    <h5>文章内容</h5><textarea v-model="content" style="height:500px;width:550px"/>
+    <h5>文章内容</h5><textarea v-model="content" style="width:60%;height:60%;margin: 0 auto;"/>
     <br/>
     <button v-on:click="save">保存</button>
   </div>

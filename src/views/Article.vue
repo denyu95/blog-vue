@@ -1,7 +1,7 @@
 <template>
-  <div class="article">
+  <div class="article" style="width:80%;margin: 0 auto;">
     <h1>{{title}}</h1>
-    <div v-html="content" style="margin-left:30%;text-align:left;"></div>
+    <div v-html="content" style="margin-left:5%;margin-right:5%;text-align:left;"></div>
   </div>
 </template>
 
