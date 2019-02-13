@@ -7,6 +7,7 @@
 
 <script>
   import { getArticle } from '@/api/article';
+  import md from '@/md_parser.js';
   
   /* eslint-disable */
   export default {
@@ -20,7 +21,7 @@
     created: function() {
       getArticle(this.$route.params.id).then(res => {
         this.title = res.data.title
-        this.content = res.data.content
+        this.content = md(res.data.content)
       }).catch(err => {
         console.log(err)
       })
